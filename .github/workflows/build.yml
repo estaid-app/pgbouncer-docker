@@ -27,13 +27,13 @@ jobs:
         id: meta
         uses: docker/metadata-action@v4
         with:
-          images: ghcr.io/estaid-app/{{ env.GITHUB_REPOSITORY }}
+          images: ghcr.io/estaid-app/pgbouncer-docker
           labels: |
             io.artifacthub.package.category=database
             io.artifacthub.package.keywords=postgresql,postgres,pgbouncer
             io.artifacthub.package.license=MIT
             io.artifacthub.package.maintainers=[{"name":"KB","email":"kb@estaid.dk"}]
-            io.artifacthub.package.readme-url=https://github.com/estaid-app/${{ env.GITHUB_REPOSITORY }}/blob/main/README.md
+            io.artifacthub.package.readme-url=https://github.com/estaid-app/pgbouncer-docker/blob/main/README.md
           tags: |
             type=raw,value=${{ steps.prep.outputs.tag_name }}
 
